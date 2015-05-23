@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Prezzy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="container">
-    <%= yield %>
-  </div>
-</body>
+<%= html_tag :class => "no-js" %>
+  <%= render "head" %>
+
+  <body class="<%= controller.controller_name %>">
+    <div id="wrap">
+      <%= render "chromeframe" %>
+      <%= render "header" %>
+      <%= render "flashes" %>
+      <%= yield %>
+
+      <%= render "footer" %>
+
+      <%= render "stylesheets" %>
+
+      <%# Javascript at the bottom for fast page loading %>
+      <%= render "javascripts" %>
+    </div>
+  </body>
 </html>

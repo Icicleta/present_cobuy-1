@@ -12,6 +12,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'vacuum'
 gem 'bootstrap-sass'
+gem 'compass-rails'
+gem 'compass-h5bp'
+gem 'html5-rails'
+gem 'sprockets'
 gem 'cocoon'
 
 group :development, :test do
